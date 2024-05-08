@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Person</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 50px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+        </head>
+<body>
+<h2>Add Person</h2>
+<form action="#" th:action="@{/add}" th:object="${person}" method="post">
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p>Address: <input type="text" th:field="*{address}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>
